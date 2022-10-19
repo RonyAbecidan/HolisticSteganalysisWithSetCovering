@@ -21,75 +21,6 @@ class CSM:
             self.regret_matrix=csm_matrix-np.tile(np.diag(csm_matrix).reshape(-1,1),(self.N)).T
             self.seed=seed
 
-      def regret_clustering(self,nb_iter=50,current_labels=None):
-            '''
-            Inputs:
-            @nb_iter : maximum of iterations 
-            @current_labels : initialization of the clustering provided by the user
-
-            Aim:
-            This method builds a clustering of the sources involved in the csm matrix.
-            The core idea is to foster the creation of clusters with relevant representatives.
-            A relevant representative being a source thanks to which we can generalize as much as possible on the other sources in its cluster training from it.
-
-            The pseudo-code is inspired from the K-means algorithm and it is available in the folder "Pseudo_codes".
-                    
-            '''
-
-            if current_labels is None:
-                '''
-                Intuitive initialization : 
-                For each source, assign the label corresponding to the other source in the grid minimizing
-                the regret with it.
-                '''
-  
-                current_labels=(self.regret_matrix+np.diag(243*[50])).argmin(axis=0)
-
-            for iter in range(nb_iter):
-
-                current_representatives=[]
-                
-                for k in np.unique(current_labels):
-                    order=np.where(current_labels==k)[0]
-                    cluster=self.regret_matrix[order,:][:,order]
-                    virtual_repr=cluster.max(axis=1).argmin()
-                    current_representatives.append(order[virtual_repr])
-
-                current_representatives=np.array(current_representatives)
-                current_labels=(self.regret_matrix[current_representatives]).argmin(axis=0)
-
-            #at the end of the for loop we derive for the last time the best representatives in each cluster built so far.
-
-            current_representatives=[]
-            for k in np.unique(current_labels):
-                order=np.where(current_labels==k)[0]
-                cluster=self.regret_matrix[order,:][:,order]
-                virtual_repr=cluster.max(axis=1).argmin()
-                current_representatives.append(order[virtual_repr])
-
-            current_representatives=np.array(current_representatives)
-
-            return current_representatives,current_labels
-
-      def k_medioid_clustering(self,K,seed=None):
-         '''
-         Inputs:
-         @K : number of clusters wanted by the user
-         @seed : The seed for the initialization of labels assignment
-        
-         Aim:
-         This method builds a clustering of the sources involved in the csm matrix.
-         The core idea is to represent each source with the concatenation of the column and the line representing it in the 
-         PE matrix and then, use these features for a k-medioid algorithm.        
-         '''
-         features=np.concatenate([self.csm_matrix,self.csm_matrix.T],axis=1)
-         if not(seed is None):
-            kmedoids = KMedoids(n_clusters=K, init='k-medoids++',random_state=seed,metric='l2').fit(features)
-         else:
-            kmedoids = KMedoids(n_clusters=K, init='k-medoids++',metric='l2').fit(features)
-
-         return kmedoids.medoid_indices_,kmedoids.labels_
-
       def greedy_covering(self,epsilon=10):
           '''
           This is the clustering algorithm used for our experiments in the paper.
@@ -108,7 +39,7 @@ class CSM:
           The core idea is to see the clustering problem as a set-covering problem and deduce a solution of this problem
           using a greedy algorithm. More details about this idea are given in the article.
 
-          The pseudo-code is available in the article and in the folder "Pseudo_codes".
+          The pseudo-code is available in the article.
 
           '''  
 
@@ -152,7 +83,7 @@ class CSM:
           for cover in greedy_covering.keys():
               max_regrets.append(self.regret_matrix[cover,greedy_covering[cover]].max())
 
-          print('Max max regrets : ',np.max(max_regrets))
+          print('Max max regrets : ', round(np.max(max_regrets),2))
 
           #The greedy algorithm used here has a theoretical guarantee giving us an idea about how far we are from an optimal covering
           print('Minimum number of sources for the optimal covering :', np.ceil(len(greedy_covering.keys())/harmonic_sum(max(size))))
@@ -167,7 +98,7 @@ class CSM:
           return greedy_covering,np.sort(np.unique(labels_assignement)),np.array(labels_assignement)
           
                 
-      def plot_matrix(self,order=None,matrix_type='regret',title='csm_matrix'):
+      def save_matrix(self,order=None,matrix_type='regret',title=None):
           '''
           This method enables to save an heatmap representing the PE or Regret matrix reordered according to an order
           proposed by the user. By default the order is the identity.
@@ -178,6 +109,12 @@ class CSM:
           @title : The title of the plot you are going to create
           
           '''
+
+          if order is None:
+            order=np.arange(0,len(self.csm_matrix))
+
+          if title is None:
+            title=f'{matrix_type}_matrix'
 
           order = np.arange(0,len(self.csm_matrix)) if order is None else order
           reordered_matrix=self.regret_matrix[order,:][:,order] if (matrix_type.lower()=='regret') else self.csm_matrix[order,:][:,order]
@@ -192,6 +129,8 @@ class CSM:
           plt.figure(figsize=(num_ticks,num_ticks))
           sns.heatmap(reordered_matrix, annot=True,cmap="flare",vmin=reordered_matrix.min(),vmax=reordered_matrix.max(),
           yticklabels=yticklabels,xticklabels=yticklabels)
+
+          
           plt.savefig(f'{title}.pdf')
           plt.close()
         

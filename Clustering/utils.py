@@ -61,7 +61,7 @@ def build_dataset(labels):
                             
     return np.array(X),labels
 
-def parameter_importance(labels,title='MDI'):
+def parameter_importance(labels,title=None):
         '''
         This function plots the pipeline parameters importance in terms of mean decrease in impurity.
         The MDI measures the discriminative power of the parameters if we are using them to
@@ -95,7 +95,9 @@ def parameter_importance(labels,title='MDI'):
         ax.yaxis.set_label_position("right")
         ax.set_ylabel("MDI",rotation='270',labelpad = 50)
         fig.tight_layout()
-        plt.savefig(f'{title}.pdf', bbox_inches='tight')
+
+        if not(title is None):
+            plt.savefig(f'{title}.pdf', bbox_inches='tight')
       
 
 universe = {
@@ -125,7 +127,7 @@ def plot_lines_from_links(links_strength):
             plt.plot([6*(i+1),6*(i+2)],[left,right],c=color,lw=0.3*current_strength)
             
     
-def cluster_to_graph(representative_number,labels,title='default'):
+def cluster_to_graph(representative_number,labels,title=None):
     '''
     This function plot a network graph enabling to better understand the content of a cluster from a source clustering returned
     by a certain algorithm.
@@ -173,4 +175,6 @@ def cluster_to_graph(representative_number,labels,title='default'):
     ax.set_xticks(np.arange(6,(len(keys)+1)*6,6))
     ax.set_xticklabels(keys);
     ax.get_yaxis().set_visible(False)
-    plt.savefig(f'{title}.pdf', bbox_inches='tight')
+
+    if not(title is None):
+        plt.savefig(f'{title}.pdf', bbox_inches='tight')

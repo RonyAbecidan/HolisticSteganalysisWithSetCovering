@@ -5,6 +5,7 @@
 # gitignore template for Jupyter Notebooks
 # website: http://jupyter.org/
 
+*.DS_Store
 *.pdf 
 */*.pdf
 
