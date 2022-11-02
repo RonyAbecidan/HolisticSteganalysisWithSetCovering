@@ -8,7 +8,7 @@ ColorLabel=0
 InTrash=false
 
 [Exposure]
-Auto=true
+Auto=false
 Clip=0.02
 Compensation=0
 Brightness=0
@@ -108,7 +108,7 @@ LcCurve=0;
 ClCurve=0;
 
 [Sharpening]
-Enabled=true
+Enabled=false
 Method=usm
 Radius=0.5
 Amount=200
@@ -308,7 +308,7 @@ CenterX=0
 CenterY=0
 
 [Resize]
-Enabled=true
+Enabled=false
 Scale=1
 AppliesTo=Cropped area
 Method=Lanczos

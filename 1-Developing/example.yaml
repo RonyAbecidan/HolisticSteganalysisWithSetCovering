@@ -1,0 +1,28 @@
+pp3_conf_file: ref.pp3
+raw_bayer:
+    method: amaze
+crop:
+    enabled: true
+    w: 2048
+    h: 2048
+directional_pyramid_denoising:
+    enabled: false
+    luma: 100
+sharpen_micro:
+    enabled: false
+    strength: 100
+    uniformity: 5
+resize:
+    enabled: true
+    width: 512
+    height: 512
+    method: Lanczos
+post_resize_sharpening:
+    enabled: true
+    radius: 3
+    amount: 225
+black_and_white:
+    enabled: true
+jpeg:
+    qf: 98
+
