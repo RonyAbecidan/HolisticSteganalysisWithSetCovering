@@ -6,7 +6,7 @@
 ## @[WIFS2022](https://wifs2022.utt.fr/) (Shanghai, China)
 <br/>
 
-[![](https://img.shields.io/badge/Bibtex-0C0C0C?style=for-the-badge)](#BIB)  [![](https://img.shields.io/badge/Article-2E86C1?style=for-the-badge)](https://hal.archives-ouvertes.fr/hal-03374780/)  
+[![](https://img.shields.io/badge/Bibtex-0C0C0C?style=for-the-badge)](#CitingUs)   [![](https://img.shields.io/badge/Article-2E86C1?style=for-the-badge)](https://hal.archives-ouvertes.fr/hal-03840926/)  
 ### Rony Abecidan, Vincent Itier, Jeremie Boulanger, Patrick Bas, Tomáš Pevný
 
 
@@ -121,5 +121,18 @@ series = {IH&amp;MMSec '21}
 ## <a name="CitingUs"></a>Citing our paper
 ### If you wish to refer to our paper,  please use the following BibTeX entry
 ```BibTeX
+
+@inproceedings{abecidan:hal-03840926,
+  TITLE = {{Using Set Covering to Generate Databases for Holistic Steganalysis}},
+  AUTHOR = {Abecidan, Rony and Itier, Vincent and Boulanger, J{\'e}r{\'e}mie and Bas, Patrick and Pevn{\'y}, Tom{\'a}{\v s}},
+  URL = {https://hal.archives-ouvertes.fr/hal-03840926},
+  BOOKTITLE = {{IEEE International Workshop on Information Forensics and Security (WIFS 2022)}},
+  ADDRESS = {Shanghai, China},
+  YEAR = {2022},
+  MONTH = Dec,
+  PDF = {https://hal.archives-ouvertes.fr/hal-03840926/file/2022_wifs.pdf},
+  HAL_ID = {hal-03840926},
+  HAL_VERSION = {v1},
+}
 
 ```
