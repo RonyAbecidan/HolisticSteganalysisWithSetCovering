@@ -8,13 +8,15 @@ Our experimental protocol is also summed up by the following scheme :
 
 ![](./GeneratingPipelinesWIFS.jpg)
 
-Concerning the implementation, each source is defined by a yaml config representing a pipeline and containing all the hyperparameters listed above. The config file ```example.yaml``` provides a example of the expected format of each config file.
+Concerning the implementation, each source is defined by a yaml config representing a pipeline and containing all the hyperparameters listed above. The config file ```example.yaml``` provides an example of the expected format of each config file.
 
 Remarks : 
 
 - The cropping operation is done using the smart-cropping algorithm released for the challenge ALASKA 2 which selects the most textured crop among the possible candidates. It is available in the script ```image_conversion_fun.py``` downloadable with the command :
 
-" ```wget http://alaska.utt.fr/ALASKA_v2_RAWs_scripts.zip``` "
+" ```wget http://alaska.utt.fr/ALASKA_v2_RAWs_scripts.zip --no-check-certificate``` "
+
+**You need to download this script to be able to run ours**
 
 - The final jpeg compression is done using image-magick to better control it.
 
