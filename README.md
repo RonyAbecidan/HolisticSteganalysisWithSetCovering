@@ -1,9 +1,11 @@
-# Using Set Covering to Generate Databases for Holistic Steganalysis
+# Official repository for the paper :
+
+## "Using Set Covering to Generate Databases for Holistic Steganalysis"
+
+### released at @[WIFS2022](https://wifs2022.utt.fr/) (Shanghai, China)
 
 ![](https://img.shields.io/badge/Official%20-Yes-1E8449.svg) ![](https://img.shields.io/badge/Topic%20-Operational_Steganalysis-2E86C1.svg) ![visitors](https://visitor-badge.glitch.me/badge?page_id=HolisticSteganalysisWithSetCovering)
 
-
-## @[WIFS2022](https://wifs2022.utt.fr/) (Shanghai, China)
 <br/>
 
 [![](https://img.shields.io/badge/Bibtex-0C0C0C?style=for-the-badge)](#CitingUs)   [![](https://img.shields.io/badge/Article-2E86C1?style=for-the-badge)](https://hal.archives-ouvertes.fr/hal-03840926/)  
@@ -24,7 +26,7 @@
 
 - The folder ```1-Developing``` contains some code enabling to develop RAW Images like we did.
 
-- The folder ```2-Clustering``` contains some code enabling to extract relevant pipelines from the grid using the greedy set-covering algorithm we used. There is also a playground notebook to help you reproduce some results we obtained in the paper.
+- The folder ```2-Clustering``` contains some code enabling to extract relevant pipelines from the grid using the greedy set-covering algorithm we used. There is also a playground notebook to help you reproduce some results we obtained in the paper. **Don't hesitate to use our PE/Regret Matrix to derive your own conclusions**.
 
 - To be able to reproduce our experiments and do your own ones, please follow our [Installation Instructions](INSTALL.md)
 
@@ -35,8 +37,10 @@ Using a maximum regret radius of 10%, the greedy algorithm returned a set of 5 p
 
 *Whatever the source you consider from the grid, I can always find a representative among the 5 found such that, training on this representative will give me a test performance almost as satisfying as if I trained directly on the original source, the maximum difference of performance being 10%.*
 
+<p align="center">
+  <img src="https://svgshare.com/i/nrt.svg" />
+</p>
 
-![](https://svgshare.com/i/nrt.svg)
 
 Illustration of the covering obtained with a maximum regret radius of 10%
 
