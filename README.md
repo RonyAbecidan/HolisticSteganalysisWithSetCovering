@@ -38,7 +38,7 @@ Using a maximum regret radius of 10%, the greedy algorithm returned a set of 5 p
 *Whatever the source you consider from the grid, I can always find a representative among the 5 found such that, training on this representative will give me a test performance almost as satisfying as if I trained directly on the original source, the maximum difference of performance being 10%.*
 
 <p align="center">
-  <img src="https://svgshare.com/i/oaD.svg" />
+  <img src="https://svgshare.com/i/oa2.svg" />
 </p>
 
 
