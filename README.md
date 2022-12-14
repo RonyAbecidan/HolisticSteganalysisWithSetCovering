@@ -7,7 +7,7 @@
 ![](https://img.shields.io/badge/Official%20-Yes-1E8449.svg) ![](https://img.shields.io/badge/Topic%20-Operational_Steganalysis-2E86C1.svg) ![visitors](https://visitor-badge.glitch.me/badge?page_id=HolisticSteganalysisWithSetCovering)
 
 <p align="center">
-  <img src="https://svgshare.com/i/o_E.svg" />
+  <img src="goal_scheme.svg" />
 </p>
 
 
@@ -43,7 +43,7 @@ Using a maximum regret radius of 10%, the greedy algorithm returned a set of 5 p
 *Whatever the source you consider from the grid, I can always find a representative among the 5 found such that, training on this representative will give me a test performance almost as satisfying as if I trained directly on the original source, the maximum difference of performance being 10%.*
 
 <p align="center">
-  <img src="https://svgshare.com/i/oa2.svg" />
+  <img src="paving.svg" />
 </p>
 
 Illustration of the covering obtained with a maximum regret radius of 10%
