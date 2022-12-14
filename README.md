@@ -31,7 +31,7 @@
 
 - The folder ```1-Developing``` contains some code enabling to develop RAW Images like we did.
 
-- The folder ```2-Clustering``` contains some code enabling to extract relevant pipelines from the grid using the greedy set-covering algorithm we used. There is also a playground notebook to help you reproduce some results we obtained in the paper. **Don't hesitate to use our PE/Regret Matrix to derive your own conclusions**.
+- The folder ```2-Clustering``` contains some code enabling to extract relevant pipelines from the grid using the greedy set-covering algorithm we used. There is also a playground notebook to help you reproduce some results we obtained in the paper. **Don't hesitate to use our PE/Regret Matrix to derive new conclusions**.
 
 - To be able to reproduce our experiments and do your own ones, please follow our [Installation Instructions](INSTALL.md)
 
