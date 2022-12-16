@@ -38,7 +38,7 @@
 
 ## Example of covering :
 
-Using a maximum regret radius of 10%, the greedy algorithm returned a set of 5 pipelines. Hence, 5 sources enabling to cover every other source from the grid to an accuracy of 10% in terms of regret. Meaning,
+Using a maximum regret radius of 10%, the greedy algorithm returned a set of 5 pipelines. Hence, 5 sources are enabling to cover every other source from the grid to an accuracy of 10% in terms of regret. Meaning,
 
 *Whatever the source you consider from the grid, I can always find a representative among the 5 found such that, training on this representative will give me a test performance almost as satisfying as if I trained directly on the original source, the maximum difference of performance being 10%.*
 
@@ -144,3 +144,6 @@ series = {IH&amp;MMSec '21}
 }
 
 ```
+## Acknowledgements
+
+Our experiments were possible thanks to computing means of IDRIS through the resource allocation 2021- AD011013285 assigned by GENCI. This work received funding from the European Union’s Horizon 2020 research and innovation program under grant agreement No 101021687 (project “UNCOVER”) and the French Defense & Innovation Agency. The work of Tomas Pevny was supported by Czech Ministry of Education 19-29680L.
