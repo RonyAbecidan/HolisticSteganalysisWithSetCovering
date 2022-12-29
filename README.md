@@ -127,7 +127,8 @@ series = {IH&amp;MMSec '21}
 ```
 
 ---
-## <a name="CitingUs"></a>Citing our paper
+<a name="CitingUs"></a>
+## Citing our paper
 ### If you wish to refer to our paper,  please use the following BibTeX entry
 ```BibTeX
 
