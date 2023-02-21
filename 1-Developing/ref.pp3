@@ -318,7 +318,7 @@ Height=900
 
 [PostResizeSharpening]
 Enabled=false
-Method=rld
+Method=usm
 Radius=0.5
 Amount=225
 Threshold=20;80;2000;1200;
