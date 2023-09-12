@@ -4,8 +4,7 @@
 
 ### released at @[WIFS2022](https://wifs2022.utt.fr/) (Shanghai, China)
 
-![](https://img.shields.io/badge/Official%20-Yes-1E8449.svg) ![](https://img.shields.io/badge/Topic%20-Operational_Steganalysis-2E86C1.svg) ![visitors](https://visitor-badge.glitch.me/badge?page_id=HolisticSteganalysisWithSetCovering) 
-
+![](https://img.shields.io/badge/Official%20-Yes-1E8449.svg) ![](https://img.shields.io/badge/Topic%20-Operational_Steganalysis-2E86C1.svg) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=RonyAbecidan.HolisticSteganalysisWithSetCovering)
 
 [![](https://img.shields.io/badge/Bibtex-0C0C0C?style=for-the-badge)](#CitingUs)   [![](https://img.shields.io/badge/Article-2E86C1?style=for-the-badge)](https://hal.archives-ouvertes.fr/hal-03840926/)  [![](https://img.shields.io/badge/Presentation-F7DC6F?style=for-the-badge)](https://bit.ly/wifs2022holisticsteganalysis)
 
